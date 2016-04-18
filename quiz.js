@@ -1,28 +1,17 @@
  var correct = 0;
  
- // prompt
-var answer1 = prompt("What was the first name of Lincoln?");
-var answer2 = prompt("What was the first name of the first president of the US?");
-var answer3 = prompt("What color is a banana?");
-var answer4 = prompt("What company makes Dasani water?");
-var answer5 = prompt("What animal goes 'Meow'?");
- 
- // if statement
-if ( answer1.toUpperCase() === 'ABRAHAM' ) {
- correct += 1;
+ function question(question, answer) {
+  var answer = prompt(question);
+  if ( answer.toUpperCase() === answer ) {
+   correct += 1;
+  }
 }
-if ( answer2.toUpperCase() === 'GEORGE' ) {
- correct += 1;
-}
-if ( answer3.toUpperCase() === 'YELLOW' ) {
- correct += 1;
-}
-if ( answer4.toUpperCase() === 'COKE' ) {
- correct += 1;
-}
-if ( answer5.toUpperCase() === 'CAT' ) {
-  correct += 1;
-}
+
+question("What was the first name of Lincoln?", 'ABRAHAM');
+question("What was the first name of the first president of the US?", 'GEORGE');
+question("What color is a banana?", 'YELLOW');
+question("What company makes Dasani water?", 'COKE');
+question("What animal goes 'Meow'?", 'CAT');
  
  // output results
 var medal = "";
@@ -36,3 +25,7 @@ else {
  medal += "bronze";
 }
 document.write(correct + " ouf of 5 correct, you got the " + medal + " medal!");
+
+
+
+

@@ -7,6 +7,8 @@
    correct += 1;
   }
   totalAsked+=1;
+  
+  console.log("total asked: " + totalAsked + " // correct: " + correct);
 }
 
 question("What was the first name of Lincoln?", 'ABRAHAM');

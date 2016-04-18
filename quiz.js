@@ -1,10 +1,12 @@
  var correct = 0;
+ var totalAsked = 0;
  
  function question(question, answer) {
   var answer = prompt(question);
   if ( answer.toUpperCase() === answer ) {
    correct += 1;
   }
+  totalAsked+=1;
 }
 
 question("What was the first name of Lincoln?", 'ABRAHAM');
@@ -24,7 +26,7 @@ else if (correct >= 3) {
 else {
  medal += "bronze";
 }
-document.write(correct + " ouf of 5 correct, you got the " + medal + " medal!");
+document.write(correct + " ouf of " + totalAsked + " correct, you got the " + medal + " medal!");
 
 
 
